@@ -1,8 +1,8 @@
 import React from 'react';
 import { getClassname } from '../utils/component';
 
-function Text({ children, ...props }) {
-  return <p className={getClassname('text', props)}>{children}</p>
+function Text({ className, children, ...props }) {
+  return <p className={getClassname('text', props, className)}>{children}</p>
 }
 
 export default Text;

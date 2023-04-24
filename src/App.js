@@ -24,7 +24,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route index element={protectedRoute(<Home />)} />
+        <Route index element={<Home />} />
         <Route path={routes.login} element={renderLogin()} />
         <Route path={routes.product} element={protectedRoute(<Product />)} />
         <Route path={routes.provider} element={protectedRoute(<Provider />)} />
