@@ -11,6 +11,24 @@ body {
     --color-disable: #909090;
 }
 
+.text {
+    margin: 0;
+}
+.text--size-medium {
+    font-size: 24px;
+}
+.text--size-large {
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 34px;
+}
+.text--size-xlarge {
+    font-size: 42px;
+}
+.text--red {
+    color: #C82525;
+}
+
 .background {
     position: absolute;
     width: 100vw;
@@ -130,7 +148,98 @@ body {
     color: var(--color-baloot-bgc-light);
     opacity: 0.4;
 }
+.filter {
+    border-radius: 12px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px auto;
+    background-color: var(--color-baloot-bgc-light);
+    padding: 15px 30px;
+    box-sizing: border-box;
+}
+.filter__available {
+    display: flex;
+    align-items: center;
+}
+.switch {
+    margin: 10px;
+    position: relative;
+    cursor: pointer;
+}
+.switch__bg {
+    width: 50px;
+    height: 25px;
+    background-color: #808080;
+    border-radius: 100px;
+}
+.switch.active .switch__bg {
+    background-color: green;
+}
+.switch.active .switch__toggle {
+    right: 1px;
+    left: auto;
+}
+.switch__toggle {
+    height: 23px;
+    width: 23px;
+    background-color: white;
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    border-radius: 50%;
+}
 
+.sort {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+.sort .button {
+    color: var(--color-disable);
+}
+.button.button--variant-skeleton {
+    border: 1px solid #593C1C;
+    border-radius: 15px;
+    font-size: 20px;
+    color: #593C1C;
+}
+.button.button.button--variant-disable {
+    background: #F5F5F5;
+    border: 1px solid #919191;
+    border-radius: 15px;
+    font-size: 20px;
+    text-align: center;
+    color: #919191;
+}
+.button.button--variant-selected {
+    color: white;
+    background-color: var(--color-baloot-light);
+}
+.products {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.page-container {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 5%;
+}
+
+.product-card {
+    padding: 20px;
+    box-shadow: 0px 4px 4px 0px #D0D0D040;
+    border-radius: 15px;
+    margin: 20px;
+}
+.price-inline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .footer {
     width: 100%;
     color: white;
