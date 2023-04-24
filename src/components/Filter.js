@@ -12,12 +12,12 @@ function Filter({ available, onAvailableChange, sortBy, onSortByChange }) {
     />
   );
   return (
-    <div class="filter">
-      <div class="filter__available">
+    <div className="filter">
+      <div className="filter__available">
         <Text size="medium">Available commodities</Text>
         <Switch active={available} onChange={onAvailableChange} />
       </div>
-      <div class="sort">
+      <div className="sort">
         <Text size="small">sort by:</Text>
         {renderSortButton("name")}
         {renderSortButton("price")}

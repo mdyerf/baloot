@@ -10,7 +10,7 @@ import Provider from "./screens/Provider";
 import User from "./screens/User";
 
 function App() {
-  const user = null;
+  const user = {};
 
   const protectedRoute = (cmp) => (
     <ProtectedRoute user={user}>{cmp}</ProtectedRoute>
@@ -26,7 +26,7 @@ function App() {
       <Routes>
         <Route index element={<Home />} />
         <Route path={routes.login} element={renderLogin()} />
-        <Route path={routes.product} element={protectedRoute(<Product />)} />
+        <Route path={`${routes.product}/:id`} element={protectedRoute(<Product />)} />
         <Route path={routes.provider} element={protectedRoute(<Provider />)} />
         <Route path={routes.user} element={protectedRoute(<User />)} />
         <Route path="*" element={<ErrorPage status={404} />} />

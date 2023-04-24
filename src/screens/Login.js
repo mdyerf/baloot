@@ -13,9 +13,9 @@ function Login() {
 
   return (
     <>
-      <img class="background" alt="bg" src={images.image.wallpaper} />
-      <form class="login-form">
-        <img class="login-form__logo" alt="baloot" src={images.image.baloot} />
+      <img className="background" alt="bg" src={images.image.wallpaper} />
+      <form className="login-form">
+        <img className="login-form__logo" alt="baloot" src={images.image.baloot} />
         <Input
           value={username}
           onChange={(e) => setUsername(e.target.value)}
