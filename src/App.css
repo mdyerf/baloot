@@ -205,7 +205,12 @@ body {
     font-size: 20px;
     color: var(--color-baloot-dark);
 }
-.button.button.button--variant-disable {
+.button.button--variant-control {
+    color: white;
+    background-color: var(--color-baloot-dark);
+    display: inline;
+}
+.button.button--variant-disable {
     cursor: auto;
     background: #F5F5F5;
     border: 1px solid #919191;
@@ -213,6 +218,12 @@ body {
     font-size: 20px;
     text-align: center;
     color: #919191;
+}
+.button.button--variant-link {
+    background-color: transparent;
+    color: blue;
+    display: inline;
+    padding: 0;
 }
 .button.button--variant-selected {
     color: white;
@@ -244,6 +255,56 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+.product{
+    display: flex;
+    align-items: flex-start;
+}
+
+.product-image{
+    width: 50%;    
+    border-radius: 15px;
+}
+
+.product-info{
+    margin-left: 20px;
+    width: 50%;
+}
+.remain-rate-flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.rate-stars-flex{
+    margin-top:5px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.product-rate{
+    display: flex;
+}
+.start-rate{
+    width: 48px;
+    height: 48px;
+}
+.curr-rate{
+    margin-top: auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 39px;
+    color: #593C1C;
+}
+.rate-nums{
+    margin-top: auto;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #919191;
 }
 .footer {
     width: 100%;
