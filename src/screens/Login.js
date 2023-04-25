@@ -1,15 +1,15 @@
-import React, { useState } from "react";
-import Button from "../components/Button";
-import Input from "../components/Input";
-import images from "../res/images";
+import React, { useState } from 'react';
+import Button from '../components/Button';
+import Input from '../components/Input';
+import images from '../res/images';
 
 function Login() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
   const handleLogin = () => {
     console.log('log in request');
-  }
+  };
 
   return (
     <>

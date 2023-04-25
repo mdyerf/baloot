@@ -229,7 +229,7 @@ body {
     color: white;
     background-color: var(--color-baloot-light);
 }
-.products {
+.row {
     display: flex;
     align-items: center;
     justify-content: center;

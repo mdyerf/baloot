@@ -1,15 +1,12 @@
-import React from "react";
-import Button from "./Button";
-import Switch from "./Switch";
-import Text from "./Text";
+import React from 'react';
+import PropTypes from 'prop-types';
+import Button from './Button';
+import Switch from './Switch';
+import Text from './Text';
 
 function Filter({ available, onAvailableChange, sortBy, onSortByChange }) {
   const renderSortButton = (name) => (
-    <Button
-      onClick={() => onSortByChange(name)}
-      text={name}
-      variant={sortBy === name ? "selected" : null}
-    />
+    <Button onClick={() => onSortByChange(name)} text={name} variant={sortBy === name ? 'selected' : null} />
   );
   return (
     <div className="filter">
@@ -19,11 +16,18 @@ function Filter({ available, onAvailableChange, sortBy, onSortByChange }) {
       </div>
       <div className="sort">
         <Text size="small">sort by:</Text>
-        {renderSortButton("name")}
-        {renderSortButton("price")}
+        {renderSortButton('name')}
+        {renderSortButton('price')}
       </div>
     </div>
   );
 }
+
+Filter.propTypes = {
+  available: PropTypes.bool.isRequired,
+  onAvailableChange: PropTypes.func.isRequired,
+  sortBy: PropTypes.string.isRequired,
+  onSortByChange: PropTypes.func.isRequired,
+};
 
 export default Filter;

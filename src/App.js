@@ -1,25 +1,23 @@
-import React from "react";
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import ProtectedRoute from "./ProtectedRoute";
-import routes from "./routes";
-import ErrorPage from "./screens/Error";
-import Home from "./screens/Home";
-import Login from "./screens/Login";
-import Product from "./screens/Product";
-import Provider from "./screens/Provider";
-import User from "./screens/User";
+import React from 'react';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
+import ProtectedRoute from './ProtectedRoute';
+import routes from './routes';
+import ErrorPage from './screens/Error';
+import Home from './screens/Home';
+import Login from './screens/Login';
+import Product from './screens/Product';
+import Provider from './screens/Provider';
+import User from './screens/User';
 
 function App() {
   const user = {};
 
-  const protectedRoute = (cmp) => (
-    <ProtectedRoute user={user}>{cmp}</ProtectedRoute>
-  );
+  const protectedRoute = (cmp) => <ProtectedRoute user={user}>{cmp}</ProtectedRoute>;
   const renderLogin = () => {
     if (user) return <Navigate to={routes.home} />;
 
     return <Login />;
-  }
+  };
 
   return (
     <BrowserRouter>

@@ -1,3 +1,4 @@
+/* eslint-disable global-require */
 const images = {
   image: {
     wallpaper: require('../assets/wallpaper.jpg'),
@@ -5,6 +6,7 @@ const images = {
     magnifier: require('../assets/Magnifier.png'),
     star: require('../assets/Star.png'),
     stars: require('../assets/Stars.png'),
+    product: require('../assets/Product.png'),
   },
 };
 

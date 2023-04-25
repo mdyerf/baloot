@@ -1,39 +1,42 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate } from "react-router-dom";
-import routes from "../routes";
-import Filter from "../components/Filter";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import ProductCard from "../components/ProductCard";
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import routes from '../routes';
+import Filter from '../components/Filter';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import ProductCard from '../components/ProductCard';
+import images from '../res/images';
+import Page from '../components/Page';
+import Row from '../components/Row';
 
 function Home() {
   const [commodities, setCommodities] = useState([]);
   const [available, setAvailable] = useState(false);
-  const [searchValue, setSearchValue] = useState("");
-  const [searchOption, setSearchOption] = useState("name");
-  const [sortBy, setSortBy] = useState("name");
+  const [searchValue, setSearchValue] = useState('');
+  const [searchOption, setSearchOption] = useState('name');
+  const [sortBy, setSortBy] = useState('name');
 
   useEffect(() => {
     setCommodities([
       {
         id: 1,
-        title: "Phone",
+        title: 'Phone',
         remaining: 0,
-        pic: require("../assets/Product.png"),
+        pic: images.image.product,
         price: 100,
       },
       {
         id: 2,
-        title: "Phone 2",
+        title: 'Phone 2',
         remaining: 2,
-        pic: require("../assets/Product.png"),
+        pic: images.image.product,
         price: 100,
       },
       {
         id: 3,
-        title: "Phone 3",
+        title: 'Phone 3',
         remaining: 2,
-        pic: require("../assets/Product.png"),
+        pic: images.image.product,
         price: 100,
       },
     ]);
@@ -55,15 +58,9 @@ function Home() {
         onQueryChange={setSearchValue}
         onSearchOptionChange={setSearchOption}
       />
-      <div className="page-container">
-        <Filter
-          available={available}
-          sortBy={sortBy}
-          onAvailableChange={setAvailable}
-          onSortByChange={setSortBy}
-        />
-
-        <div className="products">
+      <Page>
+        <Filter available={available} sortBy={sortBy} onAvailableChange={setAvailable} onSortByChange={setSortBy} />
+        <Row>
           {commodities.map((commodity) => (
             <ProductCard
               key={commodity.id}
@@ -75,8 +72,8 @@ function Home() {
               onClick={() => navigate(`${routes.product}/${commodity.id}`)}
             />
           ))}
-        </div>
-      </div>
+        </Row>
+      </Page>
       <Footer />
     </>
   );
