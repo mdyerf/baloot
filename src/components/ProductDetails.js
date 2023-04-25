@@ -1,59 +1,60 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Text from './Text';
 import Button from './Button';
+import Row from './Row';
 import images from '../res/images';
+import Rate from './Rate';
 
 function ProductDetails({ title, remaining, rate, rateNums, provider, categories, price }) {
+  const [userRate, setUserRate] = useState(rate);
+
+  const handleRateSubmit = () => {
+    console.log(`Rate is ${userRate}`);
+  };
+
   return (
-    <div className="product">
-      <img src={images.image.product} alt="product" className="product-image" />
+    <Row justifyContent="space-around">
+      <img className="product-image" src={images.image.product} alt="product" />
       <div className="product-info">
         <Text size="large">{title}</Text>
 
-        <div className="remain-rate-flex">
+        <Row>
           <Text size="medium" className="text--red">
             {remaining} left in stock
           </Text>
 
-          <div className="product-rate">
-            <img src={images.image.star} alt="" className="start-rate" />
-            <Text size="medium" className="curr-rate">
-              {rate}
-            </Text>
-            <Text size="medium" className="rate-nums">
-              ({rateNums})
-            </Text>
-          </div>
-        </div>
+          <Row alignItems="flex-end">
+            <img src={images.image.star} alt="" />
+            <Text size="large">{rate}</Text>
+            <Text size="medium">({rateNums})</Text>
+          </Row>
+        </Row>
 
         <Text size="medium">
           by <Button text={provider} variant="link" />
         </Text>
 
-        <Text>Category(s)</Text>
+        <Text className="categories" size="medium">
+          Category(s)
+        </Text>
 
-        <ul className="categories">
+        <ul>
           {categories.map((c) => (
             <li key={c}>
-              <Text>{c}</Text>
+              <Text size="medium">{c}</Text>
             </li>
           ))}
         </ul>
 
-        <div className="price-inline">
+        <Row variant="shadow">
           <Text size="large">{price}$</Text>
           <Button text="add to card" variant="skeleton" />
-        </div>
+        </Row>
 
-        <Text size="large">rate now</Text>
-        <div className="rate-stars-flex">
-          <img src={images.image.stars} alt="" className="rate-stars" />
-          <img src={images.image.stars} alt="" className="rate-stars" />
-          <Button text="submit" variant="control" />
-        </div>
+        <Rate value={userRate} onChange={setUserRate} onSubmit={handleRateSubmit} />
       </div>
-    </div>
+    </Row>
   );
 }
 

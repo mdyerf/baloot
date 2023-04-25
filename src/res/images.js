@@ -5,6 +5,7 @@ const images = {
     baloot: require('../assets/Baloot.png'),
     magnifier: require('../assets/Magnifier.png'),
     star: require('../assets/Star.png'),
+    starGray: require('../assets/star-gray.png'),
     stars: require('../assets/Stars.png'),
     product: require('../assets/Product.png'),
   },

@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Button from './Button';
 import Text from './Text';
+import Row from './Row';
 
 function ProductCard({ title, remaining, pic, price, onClick, onAddToCard }) {
   const handleCardAdd = (e) => {
@@ -13,10 +14,10 @@ function ProductCard({ title, remaining, pic, price, onClick, onAddToCard }) {
       <Text size="large">{title}</Text>
       <Text className="text--red">{remaining} left in stock</Text>
       <img src={pic} alt="product" />
-      <div className="price-inline">
+      <Row>
         <Text size="medium">{price}$</Text>
         <Button onClick={handleCardAdd} text="add to card" variant={remaining === 0 ? 'disable' : 'skeleton'} />
-      </div>
+      </Row>
     </div>
   );
 }

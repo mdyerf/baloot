@@ -60,7 +60,7 @@ function Home() {
       />
       <Page>
         <Filter available={available} sortBy={sortBy} onAvailableChange={setAvailable} onSortByChange={setSortBy} />
-        <Row>
+        <Row justifyContent="center">
           {commodities.map((commodity) => (
             <ProductCard
               key={commodity.id}
