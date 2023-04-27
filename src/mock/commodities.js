@@ -62,3 +62,10 @@ export const product = {
     },
   ],
 };
+
+export const provider = {
+  pic: images.image.provider,
+  title: 'Huawei',
+  since: '1990',
+  commodities,
+};
