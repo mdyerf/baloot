@@ -11,6 +11,10 @@ const images = {
     like: require('../assets/Like.png'),
     dislike: require('../assets/Dislike.png'),
     provider: require('../assets/Provider.png'),
+    user: require('../assets/UserPic.png'),
+    email: require('../assets/EmailPic.png'),
+    location: require('../assets/AddressPic.png'),
+    calendar: require('../assets/BirthPic.png'),
   },
 };
 

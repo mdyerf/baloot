@@ -11,6 +11,9 @@ body {
     --color-disable: #909090;
 }
 
+.icon {
+    margin: 5px;
+}
 .text {
     margin: 0;
 }
