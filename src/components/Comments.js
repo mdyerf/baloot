@@ -23,7 +23,7 @@ function Comments({ comments }) {
       </Row>
 
       {comments.map((comment) => (
-        <Row variant="shadow">
+        <Row key={comment.id} variant="shadow">
           <div>
             <Text size="large">{comment.text}</Text>
             <Text size="small">
