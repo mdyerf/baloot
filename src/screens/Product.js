@@ -5,18 +5,10 @@ import ProductDetails from '../components/ProductDetails';
 import Page from '../components/Page';
 import Comments from '../components/Comments';
 import Suggestions from '../components/Suggestions';
+import { product as mockProduct } from '../mock/commodities';
 
 function Product() {
-  const product = {
-    title: 'Huawei nova 9',
-    provider: 'Huawei',
-    providerId: 1,
-    categories: ['IT', 'Technology'],
-    price: 300,
-    remaining: 5,
-    rate: 4.1,
-    rateNums: 12,
-  };
+  const product = mockProduct;
 
   return (
     <>
@@ -33,8 +25,8 @@ function Product() {
           provider={product.provider}
           providerId={product.providerId}
         />
-        <Comments count={2} />
-        <Suggestions title="You also might like..." />
+        <Comments comments={product.comments} />
+        <Suggestions title="You also might like..." products={product.suggestions} />
       </Page>
 
       <Footer />

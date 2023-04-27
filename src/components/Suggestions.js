@@ -1,23 +1,12 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
-import images from '../res/images';
 import routes from '../routes';
 import ProductCard from './ProductCard';
 import Row from './Row';
 import Text from './Text';
 
-function Suggestions({ title }) {
-  const commodities = [
-    {
-      id: 1,
-      title: 'Phone',
-      remaining: 0,
-      pic: images.image.product,
-      price: 100,
-    },
-  ];
-
+function Suggestions({ title, products }) {
   const navigate = useNavigate();
 
   const handleCardAdd = (id) => {
@@ -31,7 +20,7 @@ function Suggestions({ title }) {
         {title}
       </Text>
       <Row>
-        {commodities.map((commodity) => (
+        {products.map((commodity) => (
           <ProductCard
             key={commodity.id}
             title={commodity.title}
@@ -49,6 +38,7 @@ function Suggestions({ title }) {
 
 Suggestions.propTypes = {
   title: PropTypes.string.isRequired,
+  products: PropTypes.array.isRequired,
 };
 
 export default Suggestions;

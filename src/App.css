@@ -288,6 +288,10 @@ body {
 }
 .like-pic {
     margin: 5px;
+    cursor: pointer;
+}
+.like-pic:hover {
+    opacity: .5;
 }
 .comments {
     margin: 30px 0;

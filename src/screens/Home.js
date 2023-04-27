@@ -5,9 +5,9 @@ import Filter from '../components/Filter';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 import ProductCard from '../components/ProductCard';
-import images from '../res/images';
 import Page from '../components/Page';
 import Row from '../components/Row';
+import { commodities as mockCommodities } from '../mock/commodities';
 
 function Home() {
   const [commodities, setCommodities] = useState([]);
@@ -17,29 +17,7 @@ function Home() {
   const [sortBy, setSortBy] = useState('name');
 
   useEffect(() => {
-    setCommodities([
-      {
-        id: 1,
-        title: 'Phone',
-        remaining: 0,
-        pic: images.image.product,
-        price: 100,
-      },
-      {
-        id: 2,
-        title: 'Phone 2',
-        remaining: 2,
-        pic: images.image.product,
-        price: 100,
-      },
-      {
-        id: 3,
-        title: 'Phone 3',
-        remaining: 2,
-        pic: images.image.product,
-        price: 100,
-      },
-    ]);
+    setCommodities(mockCommodities);
   }, [sortBy, available, searchOption, searchValue]);
 
   const navigate = useNavigate();
