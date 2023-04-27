@@ -8,6 +8,7 @@ import images from '../res/images';
 import Rate from './Rate';
 import routes from '../routes';
 import Comments from './Comments';
+import Suggestions from './Suggestions';
 
 function ProductDetails({ title, remaining, rate, rateNums, providerId, provider, categories, price }) {
   const [userRate, setUserRate] = useState(rate);
@@ -65,6 +66,8 @@ function ProductDetails({ title, remaining, rate, rateNums, providerId, provider
         <Rate value={userRate} onChange={setUserRate} onSubmit={handleRateSubmit} />
       </div>
       <Comments count={2} />
+
+      <Suggestions />
     </Row>
   );
 }
