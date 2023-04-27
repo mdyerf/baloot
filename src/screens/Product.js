@@ -3,6 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ProductDetails from '../components/ProductDetails';
 import Page from '../components/Page';
+import Comments from '../components/Comments';
+import Suggestions from '../components/Suggestions';
 
 function Product() {
   const product = {
@@ -31,6 +33,8 @@ function Product() {
           provider={product.provider}
           providerId={product.providerId}
         />
+        <Comments count={2} />
+        <Suggestions title="You also might like..." />
       </Page>
 
       <Footer />

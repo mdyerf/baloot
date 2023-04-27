@@ -1,12 +1,13 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import PropTypes from 'prop-types';
 import images from '../res/images';
 import routes from '../routes';
 import ProductCard from './ProductCard';
 import Row from './Row';
 import Text from './Text';
 
-function Suggestions() {
+function Suggestions({ title }) {
   const commodities = [
     {
       id: 1,
@@ -26,8 +27,8 @@ function Suggestions() {
 
   return (
     <>
-      <Text size="xlarge" className="suggestion-title">
-        You also might like...
+      <Text size="large" className="suggestion-title">
+        {title}
       </Text>
       <Row>
         {commodities.map((commodity) => (
@@ -45,5 +46,9 @@ function Suggestions() {
     </>
   );
 }
+
+Suggestions.propTypes = {
+  title: PropTypes.string.isRequired,
+};
 
 export default Suggestions;

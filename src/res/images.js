@@ -10,6 +10,7 @@ const images = {
     product: require('../assets/Product.png'),
     like: require('../assets/Like.png'),
     dislike: require('../assets/Dislike.png'),
+    provider: require('../assets/Provider.png'),
   },
 };
 
