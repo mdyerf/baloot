@@ -8,6 +8,7 @@ function Product() {
   const product = {
     title: 'Huawei nova 9',
     provider: 'Huawei',
+    providerId: 1,
     categories: ['IT', 'Technology'],
     price: 300,
     remaining: 5,
@@ -28,6 +29,7 @@ function Product() {
           rate={product.rate}
           rateNums={product.rateNums}
           provider={product.provider}
+          providerId={product.providerId}
         />
       </Page>
 

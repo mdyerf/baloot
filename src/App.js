@@ -25,7 +25,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path={routes.login} element={renderLogin()} />
         <Route path={`${routes.product}/:id`} element={protectedRoute(<Product />)} />
-        <Route path={routes.provider} element={protectedRoute(<Provider />)} />
+        <Route path={`${routes.provider}/:id`} element={protectedRoute(<Provider />)} />
         <Route path={routes.user} element={protectedRoute(<User />)} />
         <Route path="*" element={<ErrorPage status={404} />} />
       </Routes>

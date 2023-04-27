@@ -14,6 +14,7 @@ function Rate({ value, onChange, onSubmit }) {
           {[...Array(10).keys()].map((i) => (
             <img
               key={i}
+              className="star-image"
               width={25}
               height={i < value ? 25 : 20}
               src={i < value ? images.image.star : images.image.starGray}

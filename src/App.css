@@ -63,16 +63,21 @@ body {
     margin: 20px auto;
     width: 70px;
 }
-
-.input--variant-outlined {
+.input {
     border: 2px solid var(--color-baloot-light);
     border-radius: 15px;
     background-color: white;
     color: var(--color-baloot-dark);
+}
+.input--variant-outlined {
     padding: 20px;
     margin-bottom: 10px;
 }
-
+.input--variant-rich {
+    width: 80vw;
+    height: 100px;
+    margin: 10px 0;
+}
 .button {
     padding: 16px 24px;
     background: var(--color-baloot-bgc-light);
@@ -239,6 +244,7 @@ body {
 .row.row--variant-shadow {
     box-shadow: 0px 4px 4px 0px #D0D0D040;
     padding: 20px;
+    width: 100%;
 }
 .page-container {
     width: 100%;
@@ -255,6 +261,19 @@ body {
     border-radius: 15px;
     margin: 20px;
     cursor: pointer;
+}
+.star-image {
+    cursor: pointer;
+}
+.star-image:hover {
+    opacity: .5;
+}
+.like-pic {
+    margin: 5px;
+}
+.comments {
+    margin: 30px 0;
+    width: 100%;
 }
 .product-card:hover {
     box-shadow: 0px 4px 4px 0px var(--color-baloot-dark);

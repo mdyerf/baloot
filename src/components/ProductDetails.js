@@ -1,16 +1,26 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Text from './Text';
 import Button from './Button';
 import Row from './Row';
 import images from '../res/images';
 import Rate from './Rate';
+import routes from '../routes';
+import Comments from './Comments';
 
-function ProductDetails({ title, remaining, rate, rateNums, provider, categories, price }) {
+function ProductDetails({ title, remaining, rate, rateNums, providerId, provider, categories, price }) {
   const [userRate, setUserRate] = useState(rate);
+
+  const navigate = useNavigate();
 
   const handleRateSubmit = () => {
     console.log(`Rate is ${userRate}`);
+  };
+
+  const handleCardAdd = (id) => {
+    console.log(`added id: ${id}`);
+    // call add to card api
   };
 
   return (
@@ -32,7 +42,7 @@ function ProductDetails({ title, remaining, rate, rateNums, provider, categories
         </Row>
 
         <Text size="medium">
-          by <Button text={provider} variant="link" />
+          by <Button text={provider} variant="link" onClick={() => navigate(`${routes.provider}/${providerId}`)} />
         </Text>
 
         <Text className="categories" size="medium">
@@ -49,11 +59,12 @@ function ProductDetails({ title, remaining, rate, rateNums, provider, categories
 
         <Row variant="shadow">
           <Text size="large">{price}$</Text>
-          <Button text="add to card" variant="skeleton" />
+          <Button text="add to card" variant="skeleton" onClick={handleCardAdd} />
         </Row>
 
         <Rate value={userRate} onChange={setUserRate} onSubmit={handleRateSubmit} />
       </div>
+      <Comments count={2} />
     </Row>
   );
 }
@@ -64,6 +75,7 @@ ProductDetails.propTypes = {
   rate: PropTypes.number.isRequired,
   rateNums: PropTypes.number.isRequired,
   provider: PropTypes.string.isRequired,
+  providerId: PropTypes.number.isRequired,
   categories: PropTypes.arrayOf(PropTypes.string).isRequired,
   price: PropTypes.number.isRequired,
 };

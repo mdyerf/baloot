@@ -8,6 +8,8 @@ const images = {
     starGray: require('../assets/star-gray.png'),
     stars: require('../assets/Stars.png'),
     product: require('../assets/Product.png'),
+    like: require('../assets/Like.png'),
+    dislike: require('../assets/Dislike.png'),
   },
 };
 
