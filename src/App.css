@@ -228,6 +228,9 @@ body {
     font-size: 20px;
     color: var(--color-baloot-dark);
 }
+.button.button--width-fill {
+    width: 100%;
+}
 .button.button--variant-control {
     color: white;
     background-color: var(--color-baloot-dark);
@@ -263,6 +266,17 @@ body {
     box-shadow: 0px 4px 4px 0px #D0D0D040;
     padding: 20px;
     width: 100%;
+}
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 50%;
+}
+.user-info {
+    height: 300px;
 }
 .page-container {
     width: 100%;
