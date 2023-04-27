@@ -236,6 +236,11 @@ body {
     background-color: var(--color-baloot-dark);
     display: inline;
 }
+.button.button--width-half {
+    width: 50%;
+    display: block;
+    margin: 20px auto;
+}
 .button.button--variant-disable {
     cursor: auto;
     background: #F5F5F5;
@@ -266,6 +271,13 @@ body {
     box-shadow: 0px 4px 4px 0px #D0D0D040;
     padding: 20px;
     width: 100%;
+}
+.row.row--width-fill {
+    width: 100%;
+}
+table {
+    width: 100%;
+    text-align: center;
 }
 .column {
     display: flex;

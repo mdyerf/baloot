@@ -69,3 +69,37 @@ export const provider = {
   since: '1990',
   commodities,
 };
+
+export const user = {
+  username: 'nigga',
+  email: 'nigga@email.com',
+  birthDate: '2001/11/09',
+  address: 'Harlem st. num 2',
+  credit: 1000000,
+  cart: [
+    {
+      id: 1,
+      image: images.image.product,
+      name: 'Galaxy S21',
+      categories: ['IT', 'Tech'],
+      price: 120000,
+      providerId: 1,
+      rating: 8.3,
+      inStock: 10,
+      inCart: 2,
+    },
+  ],
+  history: [
+    {
+      id: 1,
+      image: images.image.product,
+      name: 'Galaxy S21',
+      categories: ['IT', 'Tech'],
+      price: 120000,
+      providerId: 1,
+      rating: 8.3,
+      inStock: 10,
+      inCart: 2,
+    },
+  ],
+};

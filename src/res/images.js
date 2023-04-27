@@ -15,6 +15,8 @@ const images = {
     email: require('../assets/EmailPic.png'),
     location: require('../assets/AddressPic.png'),
     calendar: require('../assets/BirthPic.png'),
+    cart: require('../assets/shoppingCart.png'),
+    history: require('../assets/History.png'),
   },
 };
 
