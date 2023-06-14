@@ -66,6 +66,7 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
+        "endOfLine": "auto",
         // https://github.com/prettier/prettier#options
         printWidth: 120,
         singleQuote: true,
