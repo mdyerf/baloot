@@ -1,0 +1,8 @@
+services:
+  nginx-react:
+    image: nginx-react
+    ports:
+      - 80:80
+    volumes:
+      - .:/app
+
